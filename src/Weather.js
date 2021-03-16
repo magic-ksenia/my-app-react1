@@ -71,7 +71,7 @@ export default function Weather() {
           <li>Temperature: {Math.round(details.temperature)}°C</li>
           <li>Feels like: {Math.round(details.feelslike)}°C</li>
           <li>Humidity: {details.humidity}%</li>
-          <li>Wind: {details.wind} m/s</li>
+          <li>Wind: {Math.round(details.wind)} m/s</li>
           <li>Description: {details.description}</li>
           <li>
             <img src={details.icon} alt={details.description} />
