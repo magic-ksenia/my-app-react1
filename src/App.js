@@ -11,7 +11,10 @@ function App() {
         <Weather />
         <p className="footer">
           <i className="fab fa-github" aria-hidden="true"></i>
-          <a href="/" target="_blank">
+          <a
+            href="https://github.com/magic-ksenia/my-app-react1"
+            target="_blank"
+          >
             {" "}
             Open-source code
           </a>{" "}
