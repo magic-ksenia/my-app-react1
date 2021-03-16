@@ -14,6 +14,7 @@ function App() {
           <a
             href="https://github.com/magic-ksenia/my-app-react1"
             target="_blank"
+            rel="noreferrer"
           >
             {" "}
             Open-source code
