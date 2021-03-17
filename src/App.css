@@ -1,28 +1,30 @@
 .App {
   text-align: center;
+  margin: 15px auto;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   font-family: "Poppins", sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0px;
+  box-shadow: 5px 5px 8px rgba(140, 128, 199, 0.5);
 }
 
 .footer {
   font-family: "Lato", sans-serif;
   font-size: calc(5px + 2vmin);
+  margin: 20px auto;
 }
 
 a {
-  text-decoration: none;
-  color: white;
-  margin: 20px auto;
+  color: black;
 }
 
 h1 {

@@ -1,0 +1,16 @@
+.Forecast img {
+  display: block;
+  margin: 5px auto;
+  padding: 6px 16px;
+  height: 76px;
+  width: 94px;
+  background-color: #fdfdfdca;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px 1px rgba(32, 32, 32, 0.3);
+}
+
+.Weather-forecast-temperature {
+  font-size: 17px;
+  font-weight: 400;
+}

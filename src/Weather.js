@@ -46,14 +46,25 @@ export default function Weather() {
 
   let form = (
     <form className="search-form" onSubmit={handleSubmit}>
-      <input
-        type="Search"
-        placeholder="Enter a city.."
-        className="form-control"
-        onChange={updateCity}
-        autoComplete="off"
-      />
-      <input type="submit" className="btn btn-light" value="Search" />
+      <div className="row">
+        <div className="col-8">
+          <input
+            type="Search"
+            className="form-control"
+            placeholder="Enter a city..."
+            autoComplete="off"
+            onChange={updateCity}
+          />
+        </div>
+        <div className="col-3">
+          <input type="submit" className="btn btn-light" value="Search" />
+        </div>
+        <div className="col-1">
+          <button type="button" className="btn btn-light" id="current-location">
+            <i className="fas fa-map-marker-alt"></i>
+          </button>
+        </div>
+      </div>
     </form>
   );
 
