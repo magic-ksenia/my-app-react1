@@ -1,7 +1,7 @@
 import React from "react";
-import WeatherSearch from "./WeatherSearch";
 import Weather from "./Weather";
 import Forecast from "./Forecast";
+import WeatherSearch from "./WeatherSearch";
 
 import "./App.css";
 

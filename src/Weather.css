@@ -1,34 +1,12 @@
-.form-control {
-  background-color: #fdfdfdb9;
-}
-
-.form-control:hover,
-.form-control:focus {
-  background-color: #fdfdfd;
-  border-color: #fdfdfdb9;
-}
-
-input[type="search"],
-textarea {
-  outline: none;
-  box-shadow: none !important;
-  border: 1px solid #ccc !important;
+.Weather {
+  padding: 0px;
+  margin: 0px;
 }
 
 h1 {
   font-weight: 800;
-  font-size: 38px;
+  font-size: 40px;
   margin: 15px 0 5px;
-}
-
-h4.Description {
-  display: block;
-  margin: 20px auto;
-  font-weight: 500;
-}
-
-h4.Description:first-letter {
-  text-transform: capitalize;
 }
 
 h4 {
@@ -54,12 +32,27 @@ li {
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
-  position: relative;
-  left: 80px;
+}
+
+.form-control {
+  background-color: #fdfdfd6f;
+}
+
+.form-control:hover,
+.form-control:focus {
+  background-color: #fdfdfd;
+  border-color: #fdfdfdb9;
+}
+
+input[type="search"],
+textarea {
+  outline: none;
+  box-shadow: none !important;
+  border: 1px solid #ccc !important;
 }
 
 .Weather-temperature .Temperature {
-  font-size: 140px;
+  font-size: 130px;
   font-weight: 800;
   line-height: 140px;
 }
@@ -87,7 +80,22 @@ li {
   color: rgb(102, 106, 109);
   text-decoration: none;
 }
+
 .Weather-temperature a:hover {
   color: white;
   text-decoration: none;
+}
+
+.Humidity {
+  color: white;
+}
+
+h4.Description {
+  display: block;
+  margin: 20px auto;
+  font-weight: 500;
+}
+
+h4.Description:first-letter {
+  text-transform: capitalize;
 }
