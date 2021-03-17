@@ -1,3 +1,9 @@
+.Forecast {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+}
+
 .Forecast img {
   display: block;
   margin: 5px auto;
@@ -8,9 +14,4 @@
   border: 0px;
   border-radius: 5px;
   box-shadow: 3px 3px 8px 1px rgba(32, 32, 32, 0.3);
-}
-
-.Weather-forecast-temperature {
-  font-size: 17px;
-  font-weight: 400;
 }
