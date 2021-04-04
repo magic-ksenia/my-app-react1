@@ -3,6 +3,7 @@ import LastUpdated from "./LastUpdated";
 import FormatLocalTime from "./FormatLocalTime";
 import "./WeatherInfo.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import {
   faWind,
   faTint,
@@ -25,17 +26,7 @@ export default function WeatherInfo(props) {
 
       <div className="row g-0">
         <div className="col-7 p-0">
-          <div className="Weather-temperature">
-            <span className="temperature">
-              {Math.round(props.apiData.temperature)}
-            </span>
-            <span className="Units">
-              <a href="/" className="Active">
-                °C
-              </a>{" "}
-              | <a href="/">°F</a>
-            </span>
-          </div>
+          <WeatherTemperature tempC={props.apiData.temperature} />
         </div>
 
         <div className="col-5 p-0">
