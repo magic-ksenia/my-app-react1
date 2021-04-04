@@ -66,7 +66,7 @@ export default function WeatherInfo(props) {
           <small>Wind</small>
           <br />
           <p className="details">
-            <FontAwesomeIcon icon={faWind} /> {Math.round(props.apiData.wind)}{" "}
+            <FontAwesomeIcon icon={faWind} /> {Math.round(props.apiData.wind)}
             m/s
           </p>
         </div>

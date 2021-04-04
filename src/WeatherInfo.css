@@ -73,7 +73,7 @@ li {
 }
 
 p.details {
-  font-size: calc(18px+3vw);
+  font-size: calc(18px+2vw);
   margin: 0 auto;
   padding: 0px;
 }
