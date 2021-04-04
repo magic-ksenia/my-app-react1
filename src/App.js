@@ -1,7 +1,9 @@
 import React from "react";
 import Weather from "./Weather";
 import Forecast from "./Forecast";
-import WeatherSearch from "./WeatherSearch";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./App.css";
 
@@ -10,21 +12,27 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="App-wrapper">
-          <WeatherSearch />
-          <Weather />
+          <Weather defaultCity="Minsk" />
           <Forecast />
         </div>
         <p className="footer">
-          <i className="fab fa-github" aria-hidden="true"></i>
+          Coded by{" "}
+          <a
+            href="https://www.linkedin.com/in/oksana-stalbovskaya-19901126/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Oksana Stalbovskaya <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>{" "}
+          and is open-sourced on{" "}
           <a
             href="https://github.com/magic-ksenia/my-app-react1"
             target="_blank"
             rel="noreferrer"
           >
             {" "}
-            Open-source code
-          </a>{" "}
-          by Oksana Stalbovskaya👩🏻‍💻
+            GitHub <FontAwesomeIcon icon={faGithubAlt} />{" "}
+          </a>
         </p>
       </div>
     </div>

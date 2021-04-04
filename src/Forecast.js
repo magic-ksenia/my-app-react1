@@ -14,7 +14,7 @@ export default function Forecast() {
             <strong>
               <span className="Forecast-max">9</span>°
             </strong>
-            ∙<span className="Forecast-min">7</span>°
+            ∙ <span className="Forecast-min"> 7</span>°
           </div>
         </div>
         <div className="col">
@@ -24,7 +24,7 @@ export default function Forecast() {
             <strong>
               <span className="Forecast-max">9</span>°
             </strong>
-            ∙<span className="Forecast-min">7</span>°
+            ∙<span className="Forecast-min"> 7</span>°
           </div>
         </div>
         <div className="col">
@@ -32,9 +32,9 @@ export default function Forecast() {
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>
-              <span className="Forecast-max">9</span>°
+              <span className="Forecast-max">9 </span>°
             </strong>
-            ∙<span className="Forecast-min">7</span>°
+            ∙<span className="Forecast-min"> 7</span>°
           </div>
         </div>
         <div className="col">
@@ -44,7 +44,7 @@ export default function Forecast() {
             <strong>
               <span className="Forecast-max">9</span>°
             </strong>
-            ∙<span className="Forecast-min">7</span>°
+            ∙<span className="Forecast-min"> 7</span>°
           </div>
         </div>
         <div className="col">
@@ -54,7 +54,7 @@ export default function Forecast() {
             <strong>
               <span className="Forecast-max">9</span>°
             </strong>
-            ∙<span className="Forecast-min">7</span>°
+            ∙<span className="Forecast-min"> 7</span>°
           </div>
         </div>
         <div className="col">
@@ -64,7 +64,7 @@ export default function Forecast() {
             <strong>
               <span className="Forecast-max">9</span>°
             </strong>
-            ∙<span className="Forecast-min">7</span>°
+            ∙ <span className="Forecast-min">7</span>°
           </div>
         </div>
       </div>
