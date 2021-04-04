@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import LastUpdated from "./LastUpdated";
-import FormatLocalTime from "./FormatLocalTime";
-
-import {
-  faWind,
-  faTint,
-  faThermometerHalf,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Weather.css";
-import Icon from "./media/WeatherIcons/01d.png";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -29,10 +20,11 @@ export default function Weather(props) {
       feelslike: response.data.main.feels_like,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
     });
   }
+
   // Search current weather by city (API call)
   function searchWeather() {
     const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
@@ -57,7 +49,7 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row row-cols-3 d-flex flex-nowrap">
+          <div className="row row-cols-3 gx-2 d-flex flex-nowrap">
             <div className="col-7">
               <input
                 type="Search"
@@ -97,51 +89,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <LastUpdated date={weatherApiData.date} />
-        <h1 className="fw-bold text-center">
-          {weatherApiData.city}, {weatherApiData.country}
-        </h1>
-        <FormatLocalTime
-          date={weatherApiData.date}
-          timezone={weatherApiData.timezone}
-        />
-
-        <div className="row g-0 m-0">
-          <div className="col-7 p-0">
-            <div className="Weather-temperature">
-              <span className="Temperature">
-                {Math.round(weatherApiData.temperature)}
-              </span>
-              <span className="Units">
-                <a href="/" className="Active">
-                  °C
-                </a>{" "}
-                | <a href="/">°F</a>
-              </span>
-            </div>
-          </div>
-
-          <div className="col-5 p-0">
-            <div className="mt-2 text-center">
-              <img src={Icon} alt={weatherApiData.description} width="100px" />
-              <h5 className="Description">{weatherApiData.description}</h5>
-              <ul className="Details">
-                <li className="Feelslike">
-                  <FontAwesomeIcon icon={faThermometerHalf} /> Feels like:{" "}
-                  {Math.round(weatherApiData.feelslike)}°
-                </li>
-                <li className="Humidity">
-                  <FontAwesomeIcon icon={faTint} /> Humidity:{" "}
-                  {weatherApiData.humidity}%
-                </li>
-                <li className="Wind">
-                  <FontAwesomeIcon icon={faWind} /> Wind:{" "}
-                  {Math.round(weatherApiData.wind)} m/s
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo apiData={weatherApiData} />
       </div>
     );
   } else {

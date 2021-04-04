@@ -8,7 +8,7 @@ export default function Forecast() {
     <div className="Forecast">
       <div className="row row-cols-3 row-cols-sm-3 row-cols-md-6">
         <div className="col">
-          <h5 id="day-of-week">09:00</h5>
+          <h6 id="day-of-week">09:00</h6>
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>
@@ -18,7 +18,7 @@ export default function Forecast() {
           </div>
         </div>
         <div className="col">
-          <h5 id="day-of-week">12:00</h5>
+          <h6 id="day-of-week">12:00</h6>
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>
@@ -28,7 +28,7 @@ export default function Forecast() {
           </div>
         </div>
         <div className="col">
-          <h5 id="day-of-week">15:00</h5>
+          <h6 id="day-of-week">15:00</h6>
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>
@@ -38,7 +38,7 @@ export default function Forecast() {
           </div>
         </div>
         <div className="col">
-          <h5 id="day-of-week">18:00</h5>
+          <h6 id="day-of-week">18:00</h6>
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>
@@ -48,7 +48,7 @@ export default function Forecast() {
           </div>
         </div>
         <div className="col">
-          <h5 id="day-of-week">21:00</h5>
+          <h6 id="day-of-week">21:00</h6>
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>
@@ -58,7 +58,7 @@ export default function Forecast() {
           </div>
         </div>
         <div className="col">
-          <h5 id="day-of-week">00:00</h5>
+          <h6 id="day-of-week">00:00</h6>
           <img src={Icon} alt="icon" />
           <div className="Weather-forecast-temperature">
             <strong>

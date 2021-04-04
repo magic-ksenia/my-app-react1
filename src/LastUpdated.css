@@ -2,4 +2,5 @@
   font-size: calc(5px + 1vw);
   color: rgb(127, 133, 137);
   margin: 0 auto 10px;
+  text-align: left;
 }

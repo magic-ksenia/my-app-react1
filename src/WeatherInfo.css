@@ -1,0 +1,83 @@
+.WeatherInfo {
+  text-align: center;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+h1 {
+  font-size: calc(25px + 2vw);
+  font-weight: 800;
+  margin: 0 auto;
+  color: #facf5a;
+}
+
+small {
+  font-size: calc(5px + 1vw);
+  color: rgb(127, 133, 137);
+}
+
+li {
+  list-style-type: none;
+  font-size: calc(8px+1.5vw);
+  text-align: center;
+  padding: 0px 0px;
+}
+
+.Weather-temperature .temperature {
+  font-size: calc(80px + 2vw);
+  font-weight: 800;
+  line-height: calc(80px + 2vw);
+  padding-right: 0px;
+  text-align: left;
+}
+
+.Weather-temperature .Units {
+  color: white;
+  font-size: calc(10px + 2vw);
+  font-weight: 700;
+  position: relative;
+  top: -48px;
+}
+
+.Weather-temperature .Active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+
+.Weather-temperature .Active:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.Weather-temperature a {
+  color: rgb(127, 133, 137);
+  text-decoration: none;
+}
+
+.Weather-temperature a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.description {
+  font-size: calc(14px+2vw);
+  font-weight: 600;
+  display: block;
+  margin: 5px auto;
+  padding-bottom: 10px;
+}
+
+.description:first-letter {
+  text-transform: capitalize;
+}
+
+p.details {
+  font-size: calc(18px+3vw);
+  margin: 0 auto;
+  padding: 0px;
+}
+
+canvas {
+  padding: 0px;
+}
