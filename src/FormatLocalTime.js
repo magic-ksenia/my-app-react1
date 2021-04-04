@@ -1,4 +1,5 @@
 import React from "react";
+import "./FormatLocalTime";
 
 export default function FormatLocalTime(props) {
   let days = [

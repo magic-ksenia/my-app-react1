@@ -1,0 +1,10 @@
+.FormatLocalTime {
+  padding: 0px;
+  margin: 0px;
+}
+
+h4 {
+  font-size: calc(16px+2vw);
+  font-weight: 700;
+  margin: 0px auto;
+}

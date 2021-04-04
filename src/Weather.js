@@ -120,29 +120,27 @@ export default function Weather(props) {
               </span>
             </div>
           </div>
+
           <div className="col-5 p-0">
-            <div className="mt-3 text-center">
-              <img src={Icon} alt={weatherApiData.description} width="110px" />
+            <div className="mt-2 text-center">
+              <img src={Icon} alt={weatherApiData.description} width="100px" />
               <h5 className="Description">{weatherApiData.description}</h5>
+              <ul className="Details">
+                <li className="Feelslike">
+                  <FontAwesomeIcon icon={faThermometerHalf} /> Feels like:{" "}
+                  {Math.round(weatherApiData.feelslike)}°
+                </li>
+                <li className="Humidity">
+                  <FontAwesomeIcon icon={faTint} /> Humidity:{" "}
+                  {weatherApiData.humidity}%
+                </li>
+                <li className="Wind">
+                  <FontAwesomeIcon icon={faWind} /> Wind:{" "}
+                  {Math.round(weatherApiData.wind)} m/s
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-
-        <div className="details">
-          <ul>
-            <li className="Feelslike">
-              <FontAwesomeIcon icon={faThermometerHalf} /> Feels like:{" "}
-              {Math.round(weatherApiData.feelslike)}°
-            </li>
-            <li className="Humidity">
-              <FontAwesomeIcon icon={faTint} /> Humidity:{" "}
-              {weatherApiData.humidity} %
-            </li>
-            <li className="Wind">
-              <FontAwesomeIcon icon={faWind} /> Wind:{" "}
-              {Math.round(weatherApiData.wind)} m/s
-            </li>
-          </ul>
         </div>
       </div>
     );
