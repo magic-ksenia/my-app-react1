@@ -1,6 +1,6 @@
 import React from "react";
 import Weather from "./Weather";
-import Forecast from "./Forecast";
+//import Forecast from "./Forecast";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +13,6 @@ function App() {
       <div className="container">
         <div className="App-wrapper">
           <Weather defaultCity="Minsk" />
-          <Forecast />
         </div>
         <p className="footer">
           Coded by{" "}
