@@ -25,12 +25,12 @@ export default function LastUpdated(props) {
     "Nov",
     "Dec",
   ];
-
-  let date = props.date.getDate();
-  let day = days[props.date.getDay()];
-  let month = months[props.date.getMonth()];
-  let hours = props.date.getHours();
-  let minutes = props.date.getMinutes();
+  let time = new Date(props.date);
+  let date = time.getDate();
+  let day = days[time.getDay()];
+  let month = months[time.getMonth()];
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
   if (hours < 10) {
     hours = `0${hours}`;
   }

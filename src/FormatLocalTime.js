@@ -11,7 +11,7 @@ export default function FormatLocalTime(props) {
     "Friday",
     "Saturday",
   ];
-  let localTime = props.time;
+  let localTime = new Date(props.time);
   let localTimeOffset = localTime.getTimezoneOffset() * 60;
   localTime.setSeconds(
     localTime.getSeconds() + localTimeOffset + props.timezone
