@@ -1,23 +1,31 @@
 .WeatherForecast {
   text-align: center;
-  font-size: 17px;
-  font-weight: 400;
   margin: 10px 0 0 0;
 }
 
 .WeatherForecast-temperature {
-  color: #e6b329;
-  margin: 0 auto;
+  color: #ffc107;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  margin: 0 auto 5px;
   padding: 0;
 }
 
 .WeatherForecast-min {
+  white-space: nowrap;
   opacity: 0.9;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  line-height: 17px;
 }
 
 .WeatherForecast-day {
-  color: #e6b329;
-  margin-bottom: 3px;
+  color: #ffc107;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .WeatherForecast .col {
@@ -62,4 +70,10 @@
     rgba(237, 237, 237, 0.5) 78%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+
+.loading {
+  display: block;
+  margin: 10px auto;
+  color: #ffc107;
 }

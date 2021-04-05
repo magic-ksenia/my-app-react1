@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="App-wrapper">
-          <Weather defaultCity="Minsk" />
+          <Weather defaultCity="Miami" />
         </div>
         <p className="footer">
           Coded by{" "}
@@ -20,17 +20,18 @@ function App() {
             target="_blank"
             rel="noreferrer"
           >
-            Oksana Stalbovskaya <FontAwesomeIcon icon={faLinkedinIn} />
+            Oksana Stalbovskaya
           </a>{" "}
-          and is open-sourced on{" "}
+          <FontAwesomeIcon icon={faLinkedinIn} /> and is open-sourced on{" "}
           <a
             href="https://github.com/magic-ksenia/my-app-react1"
             target="_blank"
             rel="noreferrer"
           >
             {" "}
-            GitHub <FontAwesomeIcon icon={faGithubAlt} />{" "}
-          </a>
+            GitHub
+          </a>{" "}
+          <FontAwesomeIcon icon={faGithubAlt} />{" "}
         </p>
       </div>
     </div>

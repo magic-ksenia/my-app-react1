@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import Loader from "react-loader-spinner";
 
 import "./Weather.css";
 
@@ -29,7 +30,8 @@ export default function Weather(props) {
 
   // Search current weather by city (API call)
   function searchWeather() {
-    const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
+    //const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
+    const apiKey = "c2337c1b9cca266d22845eead27c0335";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -44,7 +46,8 @@ export default function Weather(props) {
   }
 
   function currentLocationSearch(position) {
-    let apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
+    // const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
+    const apiKey = "c2337c1b9cca266d22845eead27c0335";
     let currentLat = position.coords.latitude;
     let currentLong = position.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
@@ -110,6 +113,17 @@ export default function Weather(props) {
     );
   } else {
     searchWeather();
-    return <h3>Loading...</h3>;
+    return (
+      <div className="loading">
+        <h1>Loading...</h1>
+        <Loader
+          type="ThreeDots"
+          color="#ffc107"
+          height={120}
+          width={120}
+          timeout={90000}
+        />
+      </div>
+    );
   }
 }

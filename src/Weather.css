@@ -23,3 +23,9 @@ textarea {
   box-shadow: none !important;
   border: 1px solid #ccc !important;
 }
+
+.loading {
+  display: block;
+  margin: 50px auto;
+  color: gold;
+}
