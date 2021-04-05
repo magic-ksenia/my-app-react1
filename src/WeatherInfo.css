@@ -30,7 +30,7 @@ canvas {
 
 .WeatherTemperature .units {
   color: white;
-  font-size: calc(20px + 2vw);
+  font-size: calc(10px + 2vw);
   font-weight: 700;
   position: relative;
   top: -48px;
