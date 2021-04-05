@@ -2,13 +2,10 @@ import React from "react";
 import LastUpdated from "./LastUpdated";
 import FormatLocalTime from "./FormatLocalTime";
 import WeatherTemperature from "./WeatherTemperature";
-import "./WeatherInfo.css";
+import FeelsLikeTemperature from "./FeelsLikeTemperature";
 import WeatherIcon from "./WeatherIcon";
-import {
-  faWind,
-  faTint,
-  faThermometerHalf,
-} from "@fortawesome/free-solid-svg-icons";
+import "./WeatherInfo.css";
+import { faWind, faTint } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function WeatherInfo(props) {
@@ -25,7 +22,11 @@ export default function WeatherInfo(props) {
 
       <div className="row g-0">
         <div className="col-7 p-0">
-          <WeatherTemperature tempC={props.apiData.temperature} />
+          <WeatherTemperature
+            tempC={props.apiData.temperature}
+            unit={props.unit}
+            setUnit={props.setUnit}
+          />
         </div>
 
         <div className="col-5 p-0">
@@ -38,10 +39,10 @@ export default function WeatherInfo(props) {
         <div className="col-4 border-end">
           <small>Feels like</small>
           <br />
-          <p className="details">
-            <FontAwesomeIcon icon={faThermometerHalf} />{" "}
-            {Math.round(props.apiData.feelslike)}°
-          </p>
+          <FeelsLikeTemperature
+            tempC={props.apiData.feelslike}
+            unit={props.unit}
+          />
         </div>
 
         <div className="col-4 border-end">

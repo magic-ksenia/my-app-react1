@@ -3,12 +3,12 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 import Loader from "react-loader-spinner";
-
 import "./Weather.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherApiData, setWeatherApiData] = useState({ loaded: false });
+  const [unit, setUnit] = useState("celsius");
 
   // Integration of details from API
   function handleResponse(response) {
@@ -17,7 +17,7 @@ export default function Weather(props) {
       city: response.data.name,
       country: response.data.sys.country,
       coordinates: response.data.coord,
-      date: new Date(response.data.dt * 1000),
+      date: response.data.dt * 1000,
       timezone: response.data.timezone,
       temperature: response.data.main.temp,
       feelslike: response.data.main.feels_like,
@@ -32,7 +32,8 @@ export default function Weather(props) {
   function searchWeather() {
     //const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
     const apiKey = "c2337c1b9cca266d22845eead27c0335";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let unit = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -48,9 +49,10 @@ export default function Weather(props) {
   function currentLocationSearch(position) {
     // const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
     const apiKey = "c2337c1b9cca266d22845eead27c0335";
+    let unit = "metric";
     let currentLat = position.coords.latitude;
     let currentLong = position.coords.longitude;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -107,8 +109,8 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <WeatherInfo apiData={weatherApiData} />
-        <WeatherForecast coordinates={weatherApiData.coordinates} />
+        <WeatherInfo apiData={weatherApiData} unit={unit} setUnit={setUnit} />
+        <WeatherForecast coordinates={weatherApiData.coordinates} unit={unit} />
       </div>
     );
   } else {
