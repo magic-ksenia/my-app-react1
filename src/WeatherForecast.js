@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
@@ -7,6 +7,9 @@ import Loader from "react-loader-spinner";
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecastApiData, setForecastApiData] = useState(null);
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
   // Search daily forecast by coordinates (API call)
   function handleResponse(response) {
@@ -28,12 +31,14 @@ export default function WeatherForecast(props) {
       <div className="WeatherForecast">
         <div className="row">
           {forecastApiData.map(function (dailyForecast, index) {
-            if (index < 6) {
+            if (index < 5) {
               return (
                 <div className="col" key={index}>
                   <WeatherForecastDay dayData={dailyForecast} />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>

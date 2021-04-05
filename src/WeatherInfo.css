@@ -16,11 +16,8 @@ small {
   color: rgb(127, 133, 137);
 }
 
-li {
-  list-style-type: none;
-  font-size: calc(8px+1.5vw);
-  text-align: center;
-  padding: 0px 0px;
+canvas {
+  padding: 0px;
 }
 
 .WeatherTemperature .temperature {
@@ -42,11 +39,6 @@ li {
 .WeatherTemperature .Active {
   color: white;
   cursor: default;
-  text-decoration: none;
-}
-
-.WeatherTemperature .Active:hover {
-  color: white;
   text-decoration: none;
 }
 
@@ -75,9 +67,5 @@ li {
 p.details {
   font-size: calc(16px+2vw);
   margin: 0 auto;
-  padding: 0px;
-}
-
-canvas {
   padding: 0px;
 }

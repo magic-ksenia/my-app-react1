@@ -10,10 +10,10 @@
   font-weight: 600;
   margin: 0 auto 5px;
   padding: 0;
+  white-space: nowrap;
 }
 
 .WeatherForecast-min {
-  white-space: nowrap;
   opacity: 0.9;
   font-size: 15px;
   font-weight: 400;
@@ -70,10 +70,4 @@
     rgba(237, 237, 237, 0.5) 78%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
-}
-
-.loading {
-  display: block;
-  margin: 10px auto;
-  color: #ffc107;
 }

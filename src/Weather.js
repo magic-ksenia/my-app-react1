@@ -38,7 +38,7 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    searchWeather(city);
+    searchWeather();
   }
 
   function updateCity(event) {
@@ -66,10 +66,10 @@ export default function Weather(props) {
           <div className="row row-cols-3 gx-2 d-flex flex-nowrap">
             <div className="col-7">
               <input
-                type="Search"
+                type="search"
                 className="form-control "
                 placeholder="Enter a city.."
-                autoComplete="off"
+                autoFocus="on"
                 onChange={updateCity}
               />
             </div>

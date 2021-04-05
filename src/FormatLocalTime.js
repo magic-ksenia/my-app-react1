@@ -1,5 +1,5 @@
 import React from "react";
-import "./FormatLocalTime";
+import "./FormatLocalTime.css";
 
 export default function FormatLocalTime(props) {
   let days = [
@@ -11,7 +11,7 @@ export default function FormatLocalTime(props) {
     "Friday",
     "Saturday",
   ];
-  let localTime = props.date;
+  let localTime = props.time;
   let localTimeOffset = localTime.getTimezoneOffset() * 60;
   localTime.setSeconds(
     localTime.getSeconds() + localTimeOffset + props.timezone
@@ -26,8 +26,8 @@ export default function FormatLocalTime(props) {
     localMinutes = `0${localMinutes}`;
   }
   return (
-    <h4 className="FormatLocalTime text-center">
+    <div className="FormatLocalTime">
       {localDay} {localHours}:{localMinutes}
-    </h4>
+    </div>
   );
 }

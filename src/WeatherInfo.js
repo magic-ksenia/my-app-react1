@@ -1,16 +1,15 @@
 import React from "react";
 import LastUpdated from "./LastUpdated";
 import FormatLocalTime from "./FormatLocalTime";
+import WeatherTemperature from "./WeatherTemperature";
 import "./WeatherInfo.css";
 import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
 import {
   faWind,
   faTint,
   faThermometerHalf,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
@@ -20,7 +19,7 @@ export default function WeatherInfo(props) {
         {props.apiData.city}, {props.apiData.country}
       </h1>
       <FormatLocalTime
-        date={props.apiData.date}
+        time={props.apiData.date}
         timezone={props.apiData.timezone}
       />
 

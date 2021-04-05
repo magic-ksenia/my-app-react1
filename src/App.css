@@ -3,7 +3,7 @@
 }
 
 .App-wrapper {
-  max-width: 800px;
+  max-width: 900px;
   background-color: #303841;
   display: flex;
   flex-direction: column;
@@ -17,7 +17,7 @@
 .footer {
   font-family: "Lato", sans-serif;
   color: black;
-  font-size: calc(6px + 1vw);
+  font-size: calc(5px + 1vw);
   margin: 15px auto;
   text-align: center;
 }
