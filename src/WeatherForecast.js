@@ -19,8 +19,7 @@ export default function WeatherForecast(props) {
   }
 
   function loadForecast() {
-    //const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
-    const apiKey = "c2337c1b9cca266d22845eead27c0335";
+    const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
     let unit = "metric";
     let lat = props.coordinates.lat;
     let lon = props.coordinates.lon;

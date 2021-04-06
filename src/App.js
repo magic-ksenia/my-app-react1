@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="App-wrapper">
-          <Weather defaultCity="Miami" />
+          <Weather defaultCity="Barcelona" />
         </div>
         <p className="footer">
           Coded by{" "}

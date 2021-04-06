@@ -30,8 +30,7 @@ export default function Weather(props) {
 
   // Search current weather by city (API call)
   function searchWeather() {
-    //const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
-    const apiKey = "c2337c1b9cca266d22845eead27c0335";
+    const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
     let unit = "metric";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
@@ -47,8 +46,7 @@ export default function Weather(props) {
   }
 
   function currentLocationSearch(position) {
-    // const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
-    const apiKey = "c2337c1b9cca266d22845eead27c0335";
+    const apiKey = "2ccfd3ff79016dcd8763eb6a62db444b";
     let unit = "metric";
     let currentLat = position.coords.latitude;
     let currentLong = position.coords.longitude;
