@@ -24,7 +24,7 @@ function App() {
           </a>{" "}
           <FontAwesomeIcon icon={faLinkedinIn} /> and is open-sourced on{" "}
           <a
-            href="https://github.com/magic-ksenia/my-app-react1"
+            href="https://github.com/magic-ksenia/Project-3-SheCodes-weather-react"
             target="_blank"
             rel="noreferrer"
           >
